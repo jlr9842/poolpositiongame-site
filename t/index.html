@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pool Position</title>
+<!-- When ProSim has an App Store ID, add the App Clip card for table links:
+<meta name="apple-itunes-app" content="app-id=NNNNNNNNNN, app-clip-bundle-id=com.joshramey.prosim.Clip, app-clip-display=card"> -->
+<link rel="icon" href="/img/icon-prosim.png">
+<link rel="stylesheet" href="/style.css"></head>
+<body class="page">
+<div class="bar"><div class="wrap">
+  <a class="brand" href="/">Pool Position</a>
+  <nav><a href="/prosim/">ProSim</a><!-- SCOREBOOK --><a href="/scorebook/">Scorebook</a><!-- /SCOREBOOK --></nav>
+</div></div>
+<main class="wrap narrow">
+<div id="table" hidden>
+  <p class="eyebrow" style="margin-top:40px">Pool Position: ProSim</p>
+  <h1>You're invited to a table</h1>
+  <p class="muted">Table <strong id="code"></strong></p>
+  <div class="card">Open this link on an iPhone to join the table in ProSim. ProSim is coming to iPhone, iPad and Apple TV.</div>
+  <p><a href="/prosim/">About ProSim ›</a></p>
+</div>
+<div id="missing">
+  <h1 style="margin-top:40px">Not found</h1>
+  <p class="muted">That page isn't here. <a href="/">Go to Pool Position</a>.</p>
+</div>
+</main>
+<script>
+  var m = location.pathname.match(/^\/t\/([A-Za-z0-9-]{1,16})\/?$/);
+  if (m) {
+    document.getElementById('code').textContent = m[1];
+    document.getElementById('table').hidden = false;
+    document.getElementById('missing').hidden = true;
+    document.title = 'Join a table · Pool Position: ProSim';
+  }
+</script>
+</body></html>

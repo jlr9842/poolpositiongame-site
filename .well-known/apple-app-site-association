@@ -1,0 +1,15 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["R344K83LVM.com.joshramey.prosim"],
+        "components": [
+          { "/": "/t/*", "comment": "A table invite: /t/<code>" }
+        ]
+      }
+    ]
+  },
+  "appclips": {
+    "apps": ["R344K83LVM.com.joshramey.prosim.Clip"]
+  }
+}
