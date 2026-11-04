@@ -1,7 +1,9 @@
-# poolpositiongame.com
+# poolposition.app
 
 The public site for the Pool Position brand: Pool Position: ProSim (the game) and Pool Position: Scorebook.
-Static pages on GitHub Pages, custom domain `poolpositiongame.com` (DNS at GoDaddy). Only the pages and images
+Static pages on GitHub Pages, custom domain `poolposition.app` (DNS at GoDaddy; .app is HSTS-preloaded, HTTPS only).
+`poolpositiongame.com` forwards to `https://poolposition.app/prosim/` and `poolpositionapp.com` to `https://poolposition.app/`
+(GoDaddy domain forwarding, 301, not from this repo). Only the pages and images
 live here; screenshots use sample data only.
 
 | Path | What |
