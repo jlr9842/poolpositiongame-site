@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>A · Night at the table</title>
+<style>
+:root{--bg:#06100c;--ink:#f3f6f2;--muted:#a9b9ae;--gold:#f0c35a;--glass:rgba(255,255,255,.07);--edge:rgba(255,255,255,.14)}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 -apple-system,"SF Pro Text",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+.glass{background:var(--glass);border:1px solid var(--edge);backdrop-filter:blur(24px) saturate(1.5);-webkit-backdrop-filter:blur(24px) saturate(1.5);box-shadow:inset 0 1px 0 rgba(255,255,255,.12),0 20px 60px rgba(0,0,0,.45)}
+nav.top{position:fixed;top:14px;left:50%;transform:translateX(-50%);z-index:9;display:flex;gap:22px;align-items:center;padding:10px 22px;border-radius:999px;font-size:15px}
+nav.top b{font-weight:800;letter-spacing:.2px}nav.top a{color:var(--muted);text-decoration:none}
+.hero{position:relative;min-height:clamp(560px,100vh,860px);display:flex;align-items:flex-end;overflow:hidden}
+.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(6,16,12,.92) 0%,rgba(6,16,12,.6) 45%,transparent 75%),radial-gradient(120% 80% at 50% 30%,transparent 30%,rgba(6,16,12,.75) 75%),linear-gradient(180deg,transparent 45%,var(--bg))}
+.hero .in{position:relative;z-index:2;max-width:1100px;margin:0 auto;padding:0 24px 80px;width:100%}
+.kick{font-size:13px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);font-weight:700}
+h1{font-size:clamp(46px,8.5vw,112px);line-height:.95;margin:10px 0 18px;font-weight:800;letter-spacing:-2px}
+.lede{font-size:clamp(18px,2.2vw,23px);color:#dce6df;max-width:620px;margin:0}
+.chips{display:flex;gap:10px;flex-wrap:wrap;margin-top:26px}.chip{padding:10px 18px;border-radius:999px;font-weight:600;font-size:15px}
+.chip.gold{background:var(--gold);color:#1d1404;border:0}
+.wrap{max-width:1100px;margin:0 auto;padding:0 24px}
+.apps{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:-40px;position:relative;z-index:3}
+.app{border-radius:28px;padding:24px;display:flex;gap:18px;align-items:center}
+.app img{width:72px;height:72px;border-radius:17px}.app h3{margin:0;font-size:21px}.app p{margin:2px 0 0;color:var(--muted);font-size:15px}
+section{padding:110px 0 0}
+.row{display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:center}
+.row.flip{grid-template-columns:.9fr 1.1fr}.row.flip .txt{order:2}
+h2{font-size:clamp(32px,4.4vw,54px);line-height:1.02;margin:8px 0 14px;letter-spacing:-1px}
+.txt p{color:#cfdcd3;margin:0 0 12px;font-size:18px}
+.phone{border-radius:44px;border:10px solid #111;box-shadow:0 30px 80px rgba(0,0,0,.6),0 0 0 1px #333}
+.pair{display:flex;gap:22px;justify-content:center}.pair .phone{width:46%}
+.duo{border-radius:30px;box-shadow:0 30px 80px rgba(0,0,0,.6)}
+.sb{margin:110px 0 0;border-radius:36px;padding:56px;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+footer{padding:80px 24px 50px;text-align:center;color:var(--muted);font-size:14px}
+@media(max-width:760px){.apps,.row,.row.flip,.sb{grid-template-columns:1fr}.row.flip .txt{order:0}section{padding-top:70px}.sb{padding:26px}nav.top{gap:14px}}
+</style></head><body>
+<nav class="top glass"><b>Pool Position</b><a>ProSim</a><a>Scorebook</a></nav>
+<header class="hero"><img src="../../img/hero.jpg" alt=""><div class="in">
+  <div class="kick">Pool Position: ProSim</div>
+  <h1>Pool, the way<br>it really plays.</h1>
+  <p class="lede">Measured physics, a stroke that's yours, and a room worth playing in. On your iPhone, iPad and the big screen.</p>
+  <div class="chips"><span class="chip gold">Coming to iPhone, iPad and Apple TV</span></div>
+</div></header>
+<div class="wrap">
+  <div class="apps">
+    <div class="app glass"><img src="../../img/icon-prosim.png" alt=""><div><h3>ProSim</h3><p>The game · coming soon</p></div></div>
+    <div class="app glass"><img src="../../img/icon-scorebook.png" alt=""><div><h3>Scorebook</h3><p>For the rivals who play the real thing</p></div></div>
+  </div>
+  <section><div class="row"><div class="pair"><img class="phone" src="../../img/p-aim.jpg" alt=""><img class="phone" src="../../img/p-look.jpg" alt=""></div>
+    <div class="txt"><div class="kick">The stroke is the skill</div><h2>Line it up. Then really hit it.</h2><p>Set your tip, pull back and push through. Walk round the table to read the shot and step back in without losing your aim.</p></div></div></section>
+  <section><div class="row flip"><img class="phone" style="width:62%;margin:auto" src="../../img/p-house.jpg" alt="">
+    <div class="txt"><div class="kick">Physics first</div><h2>Balls that behave like balls.</h2><p>Collisions, cushions, cloth and spin modelled on published research and measurements of real tables. Chalk wears. Miscues happen.</p></div></div></section>
+  <section><div class="row"><img class="duo" src="../../img/duo.jpg" alt="">
+    <div class="txt"><div class="kick">Every screen</div><h2>Phone, Duo, iPad, TV.</h2><p>Play at a table on your phone, open the Duo for a wider view, or put the table on the Apple TV with your phone as the cue.</p></div></div></section>
+  <div class="sb glass"><div><div class="kick">Pool Position: Scorebook</div><h2>Every rack, both phones.</h2><p style="color:#cfdcd3">Score your sets with your rival, rack by rack, shared live through iCloud. Who breaks next, solids or stripes, and the all-time record.</p><div class="chips"><span class="chip gold">Coming soon to the App Store</span></div></div>
+    <div class="pair"><img class="phone" src="../../img/sb-live.jpg" alt=""><img class="phone" src="../../img/sb-halls.jpg" alt=""></div></div>
+</div>
+<footer>© 2026 Josh Ramey · Privacy · Support</footer>
+</body></html>
