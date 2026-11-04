@@ -21,3 +21,10 @@ live here; screenshots use sample data only.
 (the comment there has the markup).
 
 **When ProSim has an App Store ID:** uncomment the `apple-itunes-app` meta in `404.html` and `t/index.html`.
+
+## Backlog
+
+- **Redesign pass, with Josh in the loop (his feedback, 2026-11-04):** "not a fan of the website's look and feel, and all
+  the screenshots of ProSim look to be from really old builds or a hall that isn't updated." Take fresh ProSim
+  screenshots from the current build with the updated halls (not the 0.1 (1) and showcase shots used now), and give the
+  site a stronger look. Show Josh options before building it out.
