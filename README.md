@@ -22,9 +22,10 @@ live here; screenshots use sample data only.
 
 **When ProSim has an App Store ID:** uncomment the `apple-itunes-app` meta in `404.html` and `t/index.html`.
 
-## Backlog
+## Look and screenshots
 
-- **Redesign pass, with Josh in the loop (his feedback, 2026-11-04):** "not a fan of the website's look and feel, and all
-  the screenshots of ProSim look to be from really old builds or a hall that isn't updated." Take fresh ProSim
-  screenshots from the current build with the updated halls (not the 0.1 (1) and showcase shots used now), and give the
-  site a stronger look. Show Josh options before building it out.
+Style A, "Night at the table" (Josh's pick, 2026-11-04): dark felt, Liquid Glass panels, gold accents (`style.css`).
+Shots are from ProSim/Scorebook main in Release simulator builds (2026-11-04): iPhone 17 Pro, iPad Pro 13, iPhone Duo
+(folded, open flat, book, laptop) and the Apple TV at 1080p. Palmer's is on the site by Josh's call, framed with no
+alcohol branding (no COLD BEER sign or fridges) and not named as a partner. Sample names only; no song text.
+Refresh the shots when the halls or controls change.
