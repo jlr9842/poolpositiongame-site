@@ -25,7 +25,10 @@ live here; screenshots use sample data only.
 ## Look and screenshots
 
 Style A, "Night at the table" (Josh's pick, 2026-11-04): dark felt, Liquid Glass panels, gold accents (`style.css`).
-Shots are from ProSim/Scorebook main in Release simulator builds (2026-11-04): iPhone 17 Pro, iPad Pro 13, iPhone Duo
-(folded, open flat, book, laptop) and the Apple TV at 1080p. Palmer's is on the site by Josh's call, framed with no
-alcohol branding (no COLD BEER sign or fridges) and not named as a partner. Sample names only; no song text.
+Shots refreshed 2026-11-10 from Release simulator builds of pool-position-ios main 0056a223 (ProSim as shipped in 0.1 (21),
+8e90d952, no ProSim changes since; Scorebook as shipped in 1.3 (67), 5ccec686): iPhone 18 Pro Max, iPad Pro 13, iPhone Duo
+(folded, open flat, book, laptop; the landscape heroes are `-stills` from the open Duo) and the Apple TV. Sample names only
+(Jordan vs Casey; the House's regulars Grace and Manny are characters). Palmer's appears framed as a hall in the app, not a
+partner; its drink signs are cropped out of the hero and the halls' TVs are dark (`-lightLab notv`), so no race loop shows.
+Each shot and its launch flags are listed in the shot archive (LIST.md, kept off the site).
 Refresh the shots when the halls or controls change.
