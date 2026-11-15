@@ -25,14 +25,16 @@ live here; screenshots use sample data only.
 ## Look and screenshots
 
 Style A, "Night at the table" (Josh's pick, 2026-11-04): dark felt, Liquid Glass panels, gold accents (`style.css`).
-Shots refreshed again 2026-11-10 (Josh's notes) from Release simulator builds of pool-position-ios main 0056a223 (ProSim as
-shipped in 0.1 (21), 8e90d952; Scorebook as shipped in 1.3 (67), 5ccec686): iPhone 18 Pro Max, iPad Pro 13, iPhone Duo (folded,
-open flat, book, laptop; landscape heroes and hall pictures are `-stills` from the open Duo) and the Apple TV. **Every ProSim shot
-is taken with `-noCrowd`** (Josh: no stand-in people). Three halls: Palmer's, the Home Lounge and Pub 85 (blue and red tables).
-Pub 85's sign wall and back bar stay out of frame (no readable signs, no bottles). Scorebook shots show the tapped sets
-(`-liveEight`, `-livePoints`, `-liveRace8`) and the Table's scene row. Sample names only (Jordan vs Casey; the House's regulars
-Grace and Manny are characters). Palmer's drink signs are cropped out and the halls' TVs are dark (`-lightLab notv`).
-Each shot and its launch flags are listed in the shot archive (LIST.md, kept off the site).
-Contact on every page is support@33degrees.studio (no personal email). poolposition.app doesn't link to 33degrees.studio.
-The Scorebook's eight `sb-*.jpg` were retaken 2026-11-14 from Pool Position: Scorebook 1.3 (69), 3ef85550 (ProSim 27's scenes with the renamed signs, the tapped sets, the rule-set chip); `hero-lounge.jpg` is still the 11-10 ProSim lounge.
+Brand direction A · Pole (Josh's pick, 2026-11-15): the Pool Position mark (`img/mark-pool-position.svg`) by the nav name and the
+page lockups, the shipped A app icons (`icon-prosim.png`, `icon-scorebook.png`, touch icons) as favicons. Headings stay HTML text
+(no wordmark image until licensed lettering exists).
+Shots refreshed 2026-11-15 from Release simulator builds of pool-position-ios main 24d81934: ProSim as on main (phone Home, Who's
+in, the rank moment, a regular's page, Fran's position lesson; Apple TV first: Home, a rack in play, the rank moment, Fran's page)
+and the Scorebook 1.3 (70) shots from 11-13/14. **Phone shots carry the simulator's own iPhone bezel** (DeviceKit chrome + screen
+mask + Dynamic Island, baked in by the hub's `skills/marketing-shots/frame.swift`); `.phone` only clips the outer corner
+(border-radius 16.7%/8%). Halls are clean Apple TV frames (`-tvNoHUD -cam`) cropped so no signs, screens, bottles or drinks show.
+No crowd or patrons, hall TVs dark, sample names only (Jordan, Casey, Riley, Sam; the regulars are characters).
+Each shot and its launch flags are listed in the shot archive (Studio Storage `pool-position-shots/site-2026-11-15/LIST.md`, kept
+off the site). Still to add: the Scorebook's Duo laptop picture (`<!-- SB-DUO -->` section).
+Contact on every page is support@33degrees.studio (no personal email). Every page has a small footer link to 33degrees.studio.
 Refresh the shots when the halls or controls change.

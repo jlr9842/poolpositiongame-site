@@ -48,7 +48,9 @@ h2{font-size:clamp(32px,4.4vw,54px);line-height:1.02;margin:8px 0 14px;letter-sp
 .center .lede{margin:0 auto}
 
 /* device frames */
-.phone{border-radius:44px;border:10px solid #111;box-shadow:0 30px 80px rgba(0,0,0,.6),0 0 0 1px #333}
+/* Phone images carry the simulator's own iPhone bezel (DeviceKit chrome + screen mask, baked into the JPEG);
+   the radius clips the JPEG to that bezel's outer corner (measured: 16.7% of the width, 8% of the height). */
+.phone{border:0;border-radius:16.7%/8%;box-shadow:0 30px 80px rgba(0,0,0,.6)}
 .pair{display:flex;gap:22px;justify-content:center;align-items:flex-start}
 .pair .phone{width:46%;max-width:300px}
 .solo{width:62%;max-width:320px;margin:0 auto}
@@ -59,13 +61,12 @@ h2{font-size:clamp(32px,4.4vw,54px);line-height:1.02;margin:8px 0 14px;letter-sp
 .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:40px;align-items:end}
 .grid figure{margin:0}
 .grid figcaption{text-align:center;color:var(--muted);font-size:15px;margin-top:12px}
-.grid .phone{border-width:8px;border-radius:36px}
 .grid.two{grid-template-columns:1fr 1fr}
 .grid.three{grid-template-columns:repeat(3,1fr)}
 .grid .tall{max-width:320px;margin:0 auto}
 .stage{position:relative;margin:40px 0 50px}
 .stage .tv{width:100%}
-.stage .cue{position:absolute;bottom:-50px;width:20%;max-width:210px;border-width:7px;border-radius:30px}
+.stage .cue{position:absolute;bottom:-50px;width:20%;max-width:210px}
 .stage .cue.l{left:-1%}
 .stage .cue.r{right:-1%}
 
@@ -102,3 +103,9 @@ footer a.studio{display:block;margin:14px 0 0;font-size:12px;letter-spacing:.04e
 .appicon{width:76px;height:76px;border-radius:17px;box-shadow:0 10px 30px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.14)}
 .lockup .kick{display:flex;align-items:center;gap:10px;margin:0}
 .lockup .mk{width:26px;height:26px}
+
+/* Pool Position mark (brand A, Pole) by the nav name */
+nav.top a{flex-shrink:0}
+nav.top .brand{display:inline-flex;align-items:center;gap:8px}
+@media (max-width:420px){nav.top .brand .mk{display:none}}
+nav.top .brand .mk{width:22px;height:22px}
