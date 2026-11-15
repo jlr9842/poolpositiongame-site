@@ -112,6 +112,22 @@ nav.top .brand .mk{width:22px;height:22px}
 
 /* iPhone Duo, open: real device screenshots framed in the Duo inner-screen shape (mask from the simulator); clip the outer corner */
 .duo{border-radius:8%/5.6%;box-shadow:0 30px 80px rgba(0,0,0,.6)}
-.pair.duos{margin-top:34px}
-.pair.duos .duo{width:46%;max-width:420px}
-.block .pair.duos .duo{width:80%;max-width:420px}
+/* Duo shots: each one always fully visible in the viewport (Josh, 2026-11-15: "Only see half of each screenshot without
+   scrolling on a portrait screen"). They sit side by side only when both fit at full height; otherwise they wrap, one per row. */
+.pair.duos{margin-top:34px;flex-wrap:wrap;align-items:center;gap:28px}
+.pair.duos .duo{width:auto;height:auto;max-width:100%;max-height:min(80vh,80svh,640px)}
+.block .pair.duos .duo{max-width:min(100%,420px)}
+/* Brand A logos (wordmark in Archivo Italic, OFL; outlined SVG, no web font) */
+nav.top .brand .wm{height:24px;width:auto;max-width:none;display:block}
+@media (max-width:420px){nav.top .brand .wm{height:19px}}
+.applogo{margin:0 0 6px}
+.applogo img{display:block;height:auto;width:min(100%,440px)}
+.applogo.home img{width:min(100%,560px)}
+/* Scorebook hero: the app's own screen, no game render behind it */
+.sbhero{min-height:0;align-items:center;background:radial-gradient(90% 70% at 75% 40%,#123526 0%,#0a1d15 45%,var(--bg) 80%)}
+.sbhero:after{display:none}
+.sbhero .in{padding-top:120px;padding-bottom:70px}
+.sbgrid{display:grid;grid-template-columns:1fr 1.05fr;gap:48px;align-items:center}
+.sbshot{width:100%;height:auto;max-height:70svh;object-fit:contain;border-radius:22px;box-shadow:0 30px 80px rgba(0,0,0,.6),0 0 0 1px rgba(255,255,255,.12)}
+@media(max-width:860px){.sbgrid{grid-template-columns:1fr;gap:34px}.sbhero .in{padding-top:96px;padding-bottom:40px}.sbshot{border-radius:14px}}
+.sbhero h1{font-size:clamp(44px,6.2vw,86px)}
