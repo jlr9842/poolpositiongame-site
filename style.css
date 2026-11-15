@@ -96,3 +96,9 @@ footer a{text-decoration:none;margin:0 10px}
   .stage .cue{width:26%;bottom:-30px}
 }
 footer a.studio{display:block;margin:14px 0 0;font-size:12px;letter-spacing:.04em;opacity:.75}
+
+/* Scorebook lockup: app icon + Pool Position mark by the heading */
+.lockup{display:flex;align-items:center;gap:16px}
+.appicon{width:76px;height:76px;border-radius:17px;box-shadow:0 10px 30px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.14)}
+.lockup .kick{display:flex;align-items:center;gap:10px;margin:0}
+.lockup .mk{width:26px;height:26px}
