@@ -102,3 +102,8 @@ footer a.studio{display:block;margin:14px 0 0;font-size:12px;letter-spacing:.04e
 .appicon{width:76px;height:76px;border-radius:17px;box-shadow:0 10px 30px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.14)}
 .lockup .kick{display:flex;align-items:center;gap:10px;margin:0}
 .lockup .mk{width:26px;height:26px}
+
+/* Download on the App Store: a plain text button (swap for Apple's badge artwork if added to the repo) */
+.chip.store{display:inline-flex;flex-direction:column;line-height:1.1;background:#000;color:#fff;border:1px solid #a6a6a6;border-radius:12px;padding:8px 20px 9px}
+.chip.store small{font-size:11px;font-weight:500}
+.chip.store b{font-size:22px;font-weight:600;letter-spacing:-.3px}
