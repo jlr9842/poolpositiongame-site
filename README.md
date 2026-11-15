@@ -6,6 +6,10 @@ Static pages on GitHub Pages, custom domain `poolposition.app` (DNS at GoDaddy; 
 (GoDaddy domain forwarding, 301, not from this repo). Only the pages and images
 live here; screenshots use sample data only.
 
+**Layout:** everything the site serves lives in `docs/` (GitHub Pages source: `main`, `/docs`), including `CNAME`, `.nojekyll`
+and `.well-known/`. File paths below are relative to `docs/`. `README.md` and `.gitignore` stay at the repo root and are not
+published (they returned 200 when Pages served the root; moved 2026-11-15).
+
 | Path | What |
 |---|---|
 | `/` | Brand landing, both apps |
@@ -15,7 +19,7 @@ live here; screenshots use sample data only.
 | `/.well-known/apple-app-site-association` | applinks (`/t/*` → `com.joshramey.prosim`) and appclips (`com.joshramey.prosim.Clip`), team R344K83LVM. `.nojekyll` keeps `.well-known` published |
 
 **Removing the Scorebook:** delete `scorebook/` and every block between `<!-- SCOREBOOK -->` and
-`<!-- /SCOREBOOK -->` (`grep -rn SCOREBOOK .`).
+`<!-- /SCOREBOOK -->` (`grep -rn SCOREBOOK docs`).
 
 **When the Scorebook is live:** replace the "Coming soon" pill in `scorebook/index.html` with its App Store link
 (the comment there has the markup).
