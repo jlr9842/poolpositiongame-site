@@ -176,3 +176,8 @@ nav.top .brand .wm{height:24px;width:auto;max-width:none;display:block}
   .lap{height:min(40svh,460px)}.lap .dev{width:min(56%,440px)}
 }
 @media(min-width:600px) and (max-width:860px){.sbh .in{padding-top:110px}.lap{height:min(38svh,440px)}.lap .dev{width:min(50%,400px)}}
+
+/* Download on the App Store: a plain text button (swap for Apple's badge artwork if added to the repo) */
+.chip.store{display:inline-flex;flex-direction:column;line-height:1.1;background:#000;color:#fff;border:1px solid #a6a6a6;border-radius:12px;padding:8px 20px 9px}
+.chip.store small{font-size:11px;font-weight:500}
+.chip.store b{font-size:22px;font-weight:600;letter-spacing:-.3px}
