@@ -34,4 +34,5 @@ Pub 85's sign wall and back bar stay out of frame (no readable signs, no bottles
 Grace and Manny are characters). Palmer's drink signs are cropped out and the halls' TVs are dark (`-lightLab notv`).
 Each shot and its launch flags are listed in the shot archive (LIST.md, kept off the site).
 Contact on every page is support@33degrees.studio (no personal email). poolposition.app doesn't link to 33degrees.studio.
+The Scorebook's eight `sb-*.jpg` were retaken 2026-11-14 from Pool Position: Scorebook 1.3 (69), 3ef85550 (ProSim 27's scenes with the renamed signs, the tapped sets, the rule-set chip); `hero-lounge.jpg` is still the 11-10 ProSim lounge.
 Refresh the shots when the halls or controls change.
