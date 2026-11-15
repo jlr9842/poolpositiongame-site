@@ -109,3 +109,9 @@ nav.top a{flex-shrink:0}
 nav.top .brand{display:inline-flex;align-items:center;gap:8px}
 @media (max-width:420px){nav.top .brand .mk{display:none}}
 nav.top .brand .mk{width:22px;height:22px}
+
+/* iPhone Duo, open: real device screenshots framed in the Duo inner-screen shape (mask from the simulator); clip the outer corner */
+.duo{border-radius:8%/5.6%;box-shadow:0 30px 80px rgba(0,0,0,.6)}
+.pair.duos{margin-top:34px}
+.pair.duos .duo{width:46%;max-width:420px}
+.block .pair.duos .duo{width:80%;max-width:420px}
