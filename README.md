@@ -34,7 +34,6 @@ and the Scorebook 1.3 (70) shots from 11-13/14. **Phone shots carry the simulato
 mask + Dynamic Island, baked in by the hub's `skills/marketing-shots/frame.swift`); `.phone` only clips the outer corner
 (border-radius 16.7%/8%). Halls are clean Apple TV frames (`-tvNoHUD -cam`) cropped so no signs, screens, bottles or drinks show.
 No crowd or patrons, hall TVs dark, sample names only (Jordan, Casey, Riley, Sam; the regulars are characters).
-Each shot and its launch flags are listed in the shot archive (Studio Storage `pool-position-shots/site-2026-11-15/LIST.md`, kept
-off the site). Still to add: the Scorebook's Duo laptop picture (`<!-- SB-DUO -->` section).
+Each shot and its launch flags are listed in the shot archive (LIST.md, kept off the site). Still to add: the Scorebook's Duo laptop picture (`<!-- SB-DUO -->` section).
 Contact on every page is support@33degrees.studio (no personal email). Every page has a small footer link to 33degrees.studio.
 Refresh the shots when the halls or controls change.
