@@ -1,0 +1,178 @@
+/* poolposition.app · A · Night at the table */
+:root{--bg:#06100c;--ink:#f3f6f2;--muted:#a9b9ae;--soft:#cfdcd3;--gold:#f0c35a;--glass:rgba(255,255,255,.07);--edge:rgba(255,255,255,.14)}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 -apple-system,BlinkMacSystemFont,"SF Pro Text",system-ui,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+.glass{background:var(--glass);border:1px solid var(--edge);backdrop-filter:blur(24px) saturate(1.5);-webkit-backdrop-filter:blur(24px) saturate(1.5);box-shadow:inset 0 1px 0 rgba(255,255,255,.12),0 20px 60px rgba(0,0,0,.45)}
+.wrap{max-width:1100px;margin:0 auto;padding:0 24px}
+.narrow{max-width:760px}
+
+/* floating nav pill */
+nav.top{position:fixed;top:14px;left:50%;transform:translateX(-50%);z-index:9;display:flex;gap:22px;align-items:center;padding:10px 22px;border-radius:999px;font-size:15px;white-space:nowrap;background:rgba(10,22,16,.55)}
+nav.top a{color:var(--muted);text-decoration:none}
+nav.top a:hover,nav.top a[aria-current]{color:var(--ink)}
+nav.top .brand{font-weight:800;letter-spacing:.2px;color:var(--ink)}
+
+/* hero */
+.hero{position:relative;min-height:clamp(560px,100vh,860px);display:flex;align-items:flex-end;overflow:hidden}
+.hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(6,16,12,.92) 0%,rgba(6,16,12,.6) 45%,transparent 75%),radial-gradient(120% 80% at 50% 30%,transparent 30%,rgba(6,16,12,.75) 75%),linear-gradient(180deg,transparent 45%,var(--bg))}
+.hero .in{position:relative;z-index:2;max-width:1100px;margin:0 auto;padding:0 24px 80px;width:100%}
+.hero.short{min-height:clamp(460px,72vh,660px)}
+.kick{font-size:13px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);font-weight:700}
+h1{font-size:clamp(46px,8.5vw,112px);line-height:.95;margin:10px 0 18px;font-weight:800;letter-spacing:-2px}
+.lede{font-size:clamp(18px,2.2vw,23px);color:#dce6df;max-width:640px;margin:0}
+.chips{display:flex;gap:10px;flex-wrap:wrap;margin-top:26px}
+.chip{padding:10px 18px;border-radius:999px;font-weight:600;font-size:15px;text-decoration:none}
+.chip.gold{background:var(--gold);color:#1d1404}
+
+/* app cards under the hero */
+.apps{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:-40px;position:relative;z-index:3}
+.app{border-radius:28px;padding:24px;display:flex;gap:18px;align-items:center;text-decoration:none}
+.app:hover{border-color:rgba(240,195,90,.5)}
+.app img{width:72px;height:72px;border-radius:17px}
+.app h3{margin:0;font-size:21px}
+.app p{margin:2px 0 0;color:var(--muted);font-size:15px}
+
+/* feature rows */
+section{padding:110px 0 0}
+.row{display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:center}
+.row.flip{grid-template-columns:.9fr 1.1fr}
+.row.flip .txt{order:2}
+h2{font-size:clamp(32px,4.4vw,54px);line-height:1.02;margin:8px 0 14px;letter-spacing:-1px}
+.txt p{color:var(--soft);margin:0 0 12px;font-size:18px}
+.txt a{color:var(--gold);font-weight:600;text-decoration:none}
+.center{text-align:center}
+.center .lede{margin:0 auto}
+
+/* device frames */
+/* Phone images carry the simulator's own iPhone bezel (DeviceKit chrome + screen mask, baked into the JPEG);
+   the radius clips the JPEG to that bezel's outer corner (measured: 16.7% of the width, 8% of the height). */
+.phone{border:0;border-radius:16.7%/8%;box-shadow:0 30px 80px rgba(0,0,0,.6)}
+.pair{display:flex;gap:22px;justify-content:center;align-items:flex-start}
+.pair .phone{width:46%;max-width:300px}
+.solo{width:62%;max-width:320px;margin:0 auto}
+.screen{border-radius:22px;box-shadow:0 30px 80px rgba(0,0,0,.6),0 0 0 1px #2a2a2a}
+.tv{border-radius:14px;border:12px solid #0b0b0b;box-shadow:0 30px 80px rgba(0,0,0,.6),0 0 0 1px #333}
+
+/* galleries */
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:40px;align-items:end}
+.grid figure{margin:0}
+.grid figcaption{text-align:center;color:var(--muted);font-size:15px;margin-top:12px}
+.grid.two{grid-template-columns:1fr 1fr}
+.grid.three{grid-template-columns:repeat(3,1fr)}
+.grid .tall{max-width:320px;margin:0 auto}
+.stage{position:relative;margin:40px 0 50px}
+.stage .tv{width:100%}
+.stage .cue{position:absolute;bottom:-50px;width:20%;max-width:210px}
+.stage .cue.l{left:-1%}
+.stage .cue.r{right:-1%}
+
+/* glass blocks */
+.block{margin:110px 0 0;border-radius:36px;padding:56px;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.block p{color:var(--soft)}
+.note{border-radius:22px;padding:18px 22px;color:var(--soft);margin-top:90px}
+
+/* text pages */
+.page main{padding-top:120px}
+.page h1{font-size:clamp(38px,6vw,64px);letter-spacing:-1px}
+.page main h2{font-size:22px;letter-spacing:0;margin:34px 0 6px}
+.page main p{color:var(--soft)}
+.card{border-radius:20px;padding:16px 20px;margin:12px 0;background:var(--glass);border:1px solid var(--edge)}
+.muted{color:var(--muted)}
+
+footer{padding:90px 24px 50px;text-align:center;color:var(--muted);font-size:14px}
+footer a{text-decoration:none;margin:0 10px}
+
+@media(max-width:760px){
+  .apps,.row,.row.flip,.block{grid-template-columns:1fr}
+  .row.flip .txt{order:0}
+  section{padding-top:70px}
+  .block{padding:26px;margin-top:70px}
+  nav.top{gap:14px;padding:9px 16px;font-size:14px}
+  .grid,.grid.three{grid-template-columns:1fr 1fr}
+  .hero .in{padding-bottom:60px}
+  .stage .cue{width:26%;bottom:-30px}
+}
+footer a.studio{display:block;margin:14px 0 0;font-size:12px;letter-spacing:.04em;opacity:.75}
+
+/* Scorebook lockup: app icon + Pool Position mark by the heading */
+.lockup{display:flex;align-items:center;gap:16px}
+.appicon{width:76px;height:76px;border-radius:17px;box-shadow:0 10px 30px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.14)}
+.lockup .kick{display:flex;align-items:center;gap:10px;margin:0}
+.lockup .mk{width:26px;height:26px}
+
+/* Pool Position mark (brand A, Pole) by the nav name */
+nav.top a{flex-shrink:0}
+nav.top .brand{display:inline-flex;align-items:center;gap:8px}
+@media (max-width:420px){nav.top .brand .mk{display:none}}
+nav.top .brand .mk{width:22px;height:22px}
+
+/* iPhone Duo, open: real device screenshots framed in the Duo inner-screen shape (mask from the simulator); clip the outer corner */
+.duo{border-radius:8%/5.6%;box-shadow:0 30px 80px rgba(0,0,0,.6)}
+/* Duo shots: each one always fully visible in the viewport (Josh, 2026-11-15: "Only see half of each screenshot without
+   scrolling on a portrait screen"). They sit side by side only when both fit at full height; otherwise they wrap, one per row. */
+.pair.duos{margin-top:34px;flex-wrap:wrap;align-items:center;gap:28px}
+.pair.duos .duo{width:auto;height:auto;max-width:100%;max-height:min(80vh,80svh,640px)}
+.block .pair.duos .duo{max-width:min(100%,420px)}
+/* Brand A logos (wordmark in Archivo Italic, OFL; outlined SVG, no web font) */
+nav.top .brand .wm{height:24px;width:auto;max-width:none;display:block}
+@media (max-width:420px){nav.top .brand .wm{height:19px}}
+.applogo{margin:0 0 6px}
+.applogo img{display:block;height:auto;width:min(100%,440px)}
+.applogo.home img{width:min(100%,560px)}
+/* Scorebook hero (Josh's pick B, 2026-11-15): the Duo standing like a laptop over the Scorebook's own Home Lounge scene,
+   blurred and darkened (PoolHalls scene stills, composited). Josh's real Duo screen, folded at the hinge in CSS. */
+.sbh{position:relative;overflow:hidden;min-height:100svh;display:flex;align-items:center;background:var(--bg)}
+.sbh>.bg,.both>.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+.sbh:after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
+  background:radial-gradient(110% 70% at 70% 35%,transparent 20%,rgba(6,16,12,.55) 70%),linear-gradient(180deg,rgba(6,16,12,.35) 0%,transparent 25%,transparent 55%,var(--bg) 100%)}
+.sbh .in{position:relative;z-index:2;max-width:1180px;margin:0 auto;padding:110px 24px 70px;width:100%;display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+.sbh h1{font-size:clamp(44px,5.4vw,78px)}
+.sbh .applogo img{width:min(100%,420px)}
+.lap{position:relative;height:min(66svh,560px);display:flex;justify-content:center;align-items:flex-end;perspective:1300px;perspective-origin:50% 0%}
+.lap .dev{position:relative;width:min(100%,520px);aspect-ratio:900/1262;transform-style:preserve-3d;transform:translateY(19%)}
+.lap .top,.lap .bot{position:absolute;left:0;right:0;background-image:url(/img/sb-duo-8ball.jpg);background-size:100% auto;background-repeat:no-repeat}
+.lap .top{top:0;height:52.7%;background-position:0 0;border-radius:8% 8% 0 0/10.6% 10.6% 0 0;box-shadow:0 30px 70px rgba(0,0,0,.55)}
+.lap .bot{top:52.7%;height:47.3%;background-position:0 100%;border-radius:0 0 8% 8%/0 0 11.8% 11.8%;transform-origin:50% 0;transform:rotateX(72deg);box-shadow:0 60px 60px rgba(0,0,0,.6)}
+.lap .shadow{position:absolute;left:4%;right:4%;top:56%;height:44%;background:radial-gradient(closest-side,rgba(0,0,0,.65),transparent);transform:rotateX(72deg);transform-origin:50% 0;filter:blur(10px)}
+
+/* "Every ball, both phones" (Josh's pick A as a full-width band): two players' phones in the same set over Palmer's,
+   blurred. Angled, so GENERIC frames (plain black body, no Dynamic Island): Apple's marketing rules forbid tilting its
+   device art. Raw simulator screens. */
+.both{position:relative;overflow:hidden;margin-top:110px;padding:110px 0 70px}
+.both:after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(180deg,var(--bg) 0%,rgba(6,16,12,.55) 22%,rgba(6,16,12,.25) 55%,var(--bg) 100%)}
+.both .wrap{position:relative;z-index:2}
+.duet{position:relative;height:min(72svh,620px);margin-top:30px;perspective:1600px;display:flex;justify-content:center;align-items:center}
+.duet .p{position:absolute;height:92%;border:clamp(6px,1vw,11px) solid #0c0c0d;border-radius:clamp(30px,5vw,56px);overflow:hidden;
+  box-shadow:0 0 0 1px rgba(255,255,255,.14),0 40px 90px rgba(0,0,0,.7);background:#000}
+.duet .p img{height:100%;width:auto;max-width:none}
+.duet .p1{transform:translateX(-34%) rotateY(20deg) rotateZ(-5deg);z-index:2}
+.duet .p2{transform:translateX(34%) translateY(-4%) rotateY(-20deg) rotateZ(5deg);z-index:1}
+.duet .tap{position:absolute;left:49.9%;top:61%;width:13%;aspect-ratio:1;transform:translate(-50%,-50%);border-radius:50%;
+  box-shadow:0 0 0 3px rgba(240,195,90,.95),0 0 0 10px rgba(240,195,90,.28),0 0 30px 8px rgba(240,195,90,.35)}
+
+/* portrait phones: the Duo on top, then logo, title, lede and the button, all in the first screen */
+@media(max-width:860px){
+  .sbh{align-items:flex-start;min-height:0}
+  .sbh .in{grid-template-columns:1fr;gap:6px;padding:76px 20px 34px}
+  .sbh .art{order:0}
+  .sbh .txt{order:1}
+  .sbh h1{font-size:clamp(38px,11vw,52px);margin:6px 0 10px;letter-spacing:-1.5px}
+  .sbh .lede{font-size:16px;line-height:1.45}
+  .sbh .applogo img{width:min(78%,330px)}
+  .sbh .chips{margin-top:16px}
+  .lap{height:min(37svh,330px)}
+  .lap .dev{width:min(74%,330px)}
+  .both{margin-top:70px;padding:80px 0 40px}
+  .duet{height:min(52svh,400px)}
+  .duet .p{border-radius:28px}
+}
+@media(min-width:861px) and (max-width:1100px) and (orientation:portrait){
+  /* iPad portrait: stack too, the Duo above the title */
+  .sbh{min-height:0}.sbh .in{grid-template-columns:1fr;gap:20px;padding-top:120px}.sbh .art{order:0}.sbh .txt{order:1}
+  .lap{height:min(40svh,460px)}.lap .dev{width:min(56%,440px)}
+}
+@media(min-width:600px) and (max-width:860px){.sbh .in{padding-top:110px}.lap{height:min(38svh,440px)}.lap .dev{width:min(50%,400px)}}
