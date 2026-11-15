@@ -123,11 +123,56 @@ nav.top .brand .wm{height:24px;width:auto;max-width:none;display:block}
 .applogo{margin:0 0 6px}
 .applogo img{display:block;height:auto;width:min(100%,440px)}
 .applogo.home img{width:min(100%,560px)}
-/* Scorebook hero: the app's own screen, no game render behind it */
-.sbhero{min-height:0;align-items:center;background:radial-gradient(90% 70% at 75% 40%,#123526 0%,#0a1d15 45%,var(--bg) 80%)}
-.sbhero:after{display:none}
-.sbhero .in{padding-top:120px;padding-bottom:70px}
-.sbgrid{display:grid;grid-template-columns:1fr 1.05fr;gap:48px;align-items:center}
-.sbshot{width:100%;height:auto;max-height:70svh;object-fit:contain;border-radius:22px;box-shadow:0 30px 80px rgba(0,0,0,.6),0 0 0 1px rgba(255,255,255,.12)}
-@media(max-width:860px){.sbgrid{grid-template-columns:1fr;gap:34px}.sbhero .in{padding-top:96px;padding-bottom:40px}.sbshot{border-radius:14px}}
-.sbhero h1{font-size:clamp(44px,6.2vw,86px)}
+/* Scorebook hero (Josh's pick B, 2026-11-15): the Duo standing like a laptop over the Scorebook's own Home Lounge scene,
+   blurred and darkened (PoolHalls scene stills, composited). Josh's real Duo screen, folded at the hinge in CSS. */
+.sbh{position:relative;overflow:hidden;min-height:100svh;display:flex;align-items:center;background:var(--bg)}
+.sbh>.bg,.both>.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+.sbh:after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
+  background:radial-gradient(110% 70% at 70% 35%,transparent 20%,rgba(6,16,12,.55) 70%),linear-gradient(180deg,rgba(6,16,12,.35) 0%,transparent 25%,transparent 55%,var(--bg) 100%)}
+.sbh .in{position:relative;z-index:2;max-width:1180px;margin:0 auto;padding:110px 24px 70px;width:100%;display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+.sbh h1{font-size:clamp(44px,5.4vw,78px)}
+.sbh .applogo img{width:min(100%,420px)}
+.lap{position:relative;height:min(66svh,560px);display:flex;justify-content:center;align-items:flex-end;perspective:1300px;perspective-origin:50% 0%}
+.lap .dev{position:relative;width:min(100%,520px);aspect-ratio:900/1262;transform-style:preserve-3d;transform:translateY(19%)}
+.lap .top,.lap .bot{position:absolute;left:0;right:0;background-image:url(/img/sb-duo-8ball.jpg);background-size:100% auto;background-repeat:no-repeat}
+.lap .top{top:0;height:52.7%;background-position:0 0;border-radius:8% 8% 0 0/10.6% 10.6% 0 0;box-shadow:0 30px 70px rgba(0,0,0,.55)}
+.lap .bot{top:52.7%;height:47.3%;background-position:0 100%;border-radius:0 0 8% 8%/0 0 11.8% 11.8%;transform-origin:50% 0;transform:rotateX(72deg);box-shadow:0 60px 60px rgba(0,0,0,.6)}
+.lap .shadow{position:absolute;left:4%;right:4%;top:56%;height:44%;background:radial-gradient(closest-side,rgba(0,0,0,.65),transparent);transform:rotateX(72deg);transform-origin:50% 0;filter:blur(10px)}
+
+/* "Every ball, both phones" (Josh's pick A as a full-width band): two players' phones in the same set over Palmer's,
+   blurred. Angled, so GENERIC frames (plain black body, no Dynamic Island): Apple's marketing rules forbid tilting its
+   device art. Raw simulator screens. */
+.both{position:relative;overflow:hidden;margin-top:110px;padding:110px 0 70px}
+.both:after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(180deg,var(--bg) 0%,rgba(6,16,12,.55) 22%,rgba(6,16,12,.25) 55%,var(--bg) 100%)}
+.both .wrap{position:relative;z-index:2}
+.duet{position:relative;height:min(72svh,620px);margin-top:30px;perspective:1600px;display:flex;justify-content:center;align-items:center}
+.duet .p{position:absolute;height:92%;border:clamp(6px,1vw,11px) solid #0c0c0d;border-radius:clamp(30px,5vw,56px);overflow:hidden;
+  box-shadow:0 0 0 1px rgba(255,255,255,.14),0 40px 90px rgba(0,0,0,.7);background:#000}
+.duet .p img{height:100%;width:auto;max-width:none}
+.duet .p1{transform:translateX(-34%) rotateY(20deg) rotateZ(-5deg);z-index:2}
+.duet .p2{transform:translateX(34%) translateY(-4%) rotateY(-20deg) rotateZ(5deg);z-index:1}
+.duet .tap{position:absolute;left:49.9%;top:61%;width:13%;aspect-ratio:1;transform:translate(-50%,-50%);border-radius:50%;
+  box-shadow:0 0 0 3px rgba(240,195,90,.95),0 0 0 10px rgba(240,195,90,.28),0 0 30px 8px rgba(240,195,90,.35)}
+
+/* portrait phones: the Duo on top, then logo, title, lede and the button, all in the first screen */
+@media(max-width:860px){
+  .sbh{align-items:flex-start;min-height:0}
+  .sbh .in{grid-template-columns:1fr;gap:6px;padding:76px 20px 34px}
+  .sbh .art{order:0}
+  .sbh .txt{order:1}
+  .sbh h1{font-size:clamp(38px,11vw,52px);margin:6px 0 10px;letter-spacing:-1.5px}
+  .sbh .lede{font-size:16px;line-height:1.45}
+  .sbh .applogo img{width:min(78%,330px)}
+  .sbh .chips{margin-top:16px}
+  .lap{height:min(37svh,330px)}
+  .lap .dev{width:min(74%,330px)}
+  .both{margin-top:70px;padding:80px 0 40px}
+  .duet{height:min(52svh,400px)}
+  .duet .p{border-radius:28px}
+}
+@media(min-width:861px) and (max-width:1100px) and (orientation:portrait){
+  /* iPad portrait: stack too, the Duo above the title */
+  .sbh{min-height:0}.sbh .in{grid-template-columns:1fr;gap:20px;padding-top:120px}.sbh .art{order:0}.sbh .txt{order:1}
+  .lap{height:min(40svh,460px)}.lap .dev{width:min(56%,440px)}
+}
+@media(min-width:600px) and (max-width:860px){.sbh .in{padding-top:110px}.lap{height:min(38svh,440px)}.lap .dev{width:min(50%,400px)}}

@@ -33,8 +33,15 @@ copy them from there, never retype. The mark (`img/mark-pool-position.svg`) stay
 touch icons and the home page's app cards.
 Footer copyright on every page: "© 2026 Thirty-Three Degrees Studio LLC" (Josh, 2026-11-15: "Go ahead and use © 2026 Thirty-Three
 Degrees Studio LLC now").
-Scorebook page hero: the app's own Table screen on an open iPhone Duo (`img/sb-duo.jpg`), never a ProSim render (Josh, 2026-11-15:
-"on the scorebook page the top image shouldn't be an image from ProSim game"). Duo shots (`.pair.duos`) are capped at 80% of the
+Scorebook page hero (Josh's pick B, 2026-11-15: "A and B are both fantastic!!! Let's find a way to use both"): the iPhone Duo standing
+like a laptop (Josh's real Duo screen `img/sb-duo-8ball.jpg`, folded at the hinge in CSS) over the Scorebook's own Home Lounge scene,
+blurred and darkened (`img/sb-hero-bg-lounge.jpg`). Pick A comes back as the full-width "Every ball, both phones" band: two phones in
+the same set over Palmer's, blurred (`img/sb-hero-bg-palmers.jpg`, raw screen `img/sb-screen-live.jpg`). The angled phones use GENERIC
+frames (plain black CSS body, no Dynamic Island): Apple's marketing rules forbid tilting its device art; upright phones keep the real
+bezel. Backdrops are composites of the PoolHalls scene stills (pool-position-ios `Packages/PoolKit/Sources/PoolHalls/Resources/
+Scenes.xcassets`, laptop layers Hall+Glow+Cloth+Rails, cloth tinted to the app's colors, blur 22 px, brightness 0.62). Never a ProSim
+render on the Scorebook page. The old Duo-table hero (`sb-duo.jpg`) is gone (Josh: "Not a good first image to see").
+Duo shots (`.pair.duos`) are capped at 80% of the
 viewport height and wrap, so each is fully visible on a portrait phone; side by side only when both fit (Josh, 2026-11-15: "Only see
 half of each screenshot without scrolling on a portrait screen").
 Shots refreshed 2026-11-15 from Release simulator builds of pool-position-ios main 24d81934: ProSim as on main (phone Home, Who's
